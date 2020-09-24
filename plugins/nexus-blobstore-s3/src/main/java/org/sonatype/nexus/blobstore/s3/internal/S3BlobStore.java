@@ -391,9 +391,10 @@ public class S3BlobStore
 
       // soft delete is implemented using an S3 lifecycle that sets expiration on objects with DELETED_TAG
       // tag the bytes
-      s3.setObjectTagging(tagAsDeleted(contentPath(blobId)));
+//      s3.setObjectTagging(tagAsDeleted(contentPath(blobId)));
       // tag the attributes
-      s3.setObjectTagging(tagAsDeleted(attributePath(blobId)));
+//      s3.setObjectTagging(tagAsDeleted(attributePath(blobId)));
+      
       blob.markStale();
 
       Long contentSize = getContentSizeForDeletion(blobAttributes);

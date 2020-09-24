@@ -141,7 +141,7 @@ public class BucketManager
     }
     BucketLifecycleConfiguration.Rule rule = new BucketLifecycleConfiguration.Rule()
         .withId(LIFECYCLE_EXPIRATION_RULE_ID_PREFIX + blobStoreName)
-        .withFilter(new LifecycleFilter(filterPredicate))
+//        .withFilter(new LifecycleFilter(filterPredicate))
         .withExpirationInDays(expirationInDays)
         .withStatus(BucketLifecycleConfiguration.ENABLED);
 
